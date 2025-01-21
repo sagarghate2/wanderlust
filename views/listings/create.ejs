@@ -1,0 +1,76 @@
+<% layout("/layouts/boilerplate")  %>
+              
+              <div class="row">
+                
+              <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+               <div class="col-8 offset-2">
+                <h3>Create a New Listing</h3>     
+            <div class="mb-3 ">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" placeholder="Enter Title" required>
+              <div class="valid-feedback">Looks good!</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" placeholder="Write something here about place" required></textarea>
+            <div class="invalid-feedback">Description should be short</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="img" class="form-label">Upload Image</label>
+            <input type="file" name="img" class="form-control" placeholder="img.jpeg" required>
+
+          </div>
+  
+          <div class="row">
+            
+
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="" name="price" class="form-control" placeholder="Enter Price" required />
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+          
+
+          <div class="mb-3 col-md-4">
+            <label for="country" class="form-label">country</label>
+            <input type="text" name="country" class="form-control" placeholder="Enter Country" required>
+            <div class="invalid-feedback">Country name should be valid</div>
+           </div>
+  
+      </div>
+      <label for="category">Category : </label>
+      <select class="form-select" name="category" id="category" aria-label="Default select example">
+        <option selected>Select Place Category</option>
+        <option value="Trending">Trending</option>
+        <option value="Beach">Beach</option>
+        <option value="Rooms">Rooms</option>
+        <option value="iconicCities">IconicCities</option>
+        <option value="Mountain">Mountain</option>
+        <option value="Castles">Castles</option>
+        <option value="Pools">Pools</option>
+        <option value="Camping">Camping</option>
+        <option value="Farms">Farms</option>
+        <option value="Arctic">Arctic</option>
+        <option value="Dome">Dome</option>
+        <option value="Boats">Boats</option>
+
+      </select>
+      
+
+
+
+           <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="location" class="form-control" placeholder="Enter Location" required>
+            <div class="invalid-feedback">Location should be valid</div>
+           </div>
+          
+              <button class="btn btn-dark add-btn"> Submit </button> <br>
+              </div>
+
+              </form>
+              </div>
+              <br>
