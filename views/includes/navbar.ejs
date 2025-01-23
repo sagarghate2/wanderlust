@@ -25,12 +25,39 @@
     width: 15.5rem;
     padding: 0.5rem 3rem 0.5rem 3rem;
   }
-  
+  .navbar-expanded{
+    background-color: #f8f9fa;
+    transition: background-color 0.3s erase;
+  }
+  .navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.navbar-expanded {
+  background-color: #f8f9fa; 
+}
+
+.navbar.navbar-expanded .nav-bar-search input,
+.navbar.navbar-expanded .nav-bar-search button {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+
+.navbar.navbar-expanded .nav-link {
+  color: #fe424d; 
+  background-color: #f8f9fa; 
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
   </style>
-  <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top" id="mainNavbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings"> <i class="fa-regular fa-compass"></i> </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -56,3 +83,16 @@
       </div>
     </div>
   </nav>
+
+
+  <script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("mainNavbar");
+  const toggler = document.getElementById("navbarToggler");
+  toggler.addEventListener("click", () => {
+    navbar.classList.toggle("navbar-expanded");
+  });
+});
+       
+  </script>

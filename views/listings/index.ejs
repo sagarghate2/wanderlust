@@ -11,6 +11,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      margin-top: 0rem;
      
     }
     .filter p{
@@ -38,55 +39,66 @@
      .filter a{
       color: black;
      }
+ 
+
+@media (max-width: 430){
+   .filter{
+    padding: 5px;
+   }
+  
+}
+
+
   </style>
 
                  <div class="filters">
+                     
+                   <div class="filter cols-sm-4">
 
-                   <div class="filter">
                       <div><a href="/listings?category=Trending"><i class="fa-solid fa-fire"></i></a></div>
                       <p>Trending</p>
                    </div>
-                   <div class="filter">
+                   <div class="filter cols-sm-4">
                     <div><a href="/listings?category=Beach"> <i class="fa-solid fa-umbrella-beach"></i></a></div>
                     <p>Beachfront</p>
                  </div>
-                 <div class="filter">
+                 <div class="filter cols-sm-4">
                   <div><a href = "/listings?category=Rooms"> <i class="fa-solid fa-bed"></i> </a></div>
                   <p>Rooms</p>
                </div>
-               <div class="filter">
+               <div class="filter cols-sm-4">
                 <div> <a href = "/listings?category=iconicCities"> <i class="fa-solid fa-mountain-city"></i> </a></div>
                 <p>IconicCities</p>
              </div>
-             <div class="filter">
+             <div class="filter cols-sm-4">
               <div>  <a href="/listings?category=Mountain"> <i class="fa-solid fa-mountain-sun"></i> </a></div>
               <p>Mountain</p>
            </div>
-           <div class="filter">
+           <div class="filter cols-sm-4">
             <div> <a href = "/listings?category=Castles"> <i class="fa-brands fa-fort-awesome"></i> </a></div>
             <p>Castles</p>
          </div>
-         <div class="filter">
+         <div class="filter cols-sm-4">
           <div> <a href="/listings?category=Pools"> <i class="fa-solid fa-person-swimming"></i> </a></div>
           <p>Amazing pools</p>
        </div>
-       <div class="filter">
+       <div class="filter cols-sm-4">
         <div> <a href="/listings?category=Camping"> <i class="fa-solid fa-campground"></i> </a></div>
         <p>Camping</p>
      </div>
-     <div class="filter">
+     <div class="filter cols-sm-4">
       <div> <a href="/listings?category=Farms"> <i class="fa-solid fa-cow"></i> </a></div>
       <p>Farms</p>
       </div>
-      <div class="filter">
+      <div class="filter cols-sm-4">
         <div> <a href="/listings?category=Arctic"> <i class="fa-regular fa-snowflake"></i>  </a></div>
         <p>Arctic</p>
         </div>
-        <div class="filter">
+        <div class="filter cols-sm-4">
           <div> <a href="/listings?category=Dome"> <i class="fa-solid fa-igloo"></i>  </a></div>
           <p>Dome</p>
           </div>
-          <div class="filter">
+          <div class="filter cols-sm-4">
             <div> <a href="/listings?category=Boats"> <i class="fa-solid fa-ship"></i> </a></div>
             <p>Boats</p>
             </div>
@@ -97,11 +109,12 @@
         </div>
    </div>
   </div>
-                 </div>
+  </div>
+
                  
             
 
-                     <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 ss">
+                     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 ss">
                       <% for(let listings of allListing){ %>     
                   
                         <a href="listings/<%=listings._id %>" class="listings-link">
